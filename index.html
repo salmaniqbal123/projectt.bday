@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        #timer, #preTimer {
+            font-size: 24px;
+            margin: 20px 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hidden {
+            display: none;
+        }
+
+        a#treasureLink {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            color: #fff;
+            background-color: #ff6b6b;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+
+        a#treasureLink:hover {
+            background-color: #ff4e4e;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 1.2rem;
+        }
+
+        .glow {
+            font-size: 3rem;
+            color: #fff;
+            text-align: center;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #ff6b6b, 0 0 30px #ff6b6b, 0 0 40px #ff6b6b, 0 0 50px #ff6b6b, 0 0 60px #ff6b6b, 0 0 70px #ff6b6b;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff6b6b, 0 0 40px #ff6b6b, 0 0 50px #ff6b6b, 0 0 60px #ff6b6b, 0 0 70px #ff6b6b, 0 0 80px #ff6b6b;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="glow">Happy Birthday, Ms Rabia Salman!</h1>
+    </header>
+    <main>
+        <section id="introduction">
+            <p>On this special day, I want you to know how much you mean to me. You bring so much joy and love into my life, and I am so grateful for you. I’m so grateful for every moment we’ve shared and for all the memories we’ve yet to create. I hope your birthday is filled with all the joy and love that you bring into my life. Here’s to celebrating you and the incredible person you are.</p>
+
+            <p>May this year bring you happiness, success, and everything your heart desires. I look forward to continuing this journey together, creating beautiful memories and facing every adventure with you by my side.</p>
+                
+            <p>Happy Birthday!<br>With all my heart,<br>Salman.</p>
+            
+            <img src="IMG-20210923-WA0010.jpg" alt="be happy be safe and be loyal" width="300">
+            
+            <p>See below, there is something more for my princess!</p>
+            
+            <a href="creative.html" id="treasureLink" class="hidden" target="_blank">Touch with your beautiful finger to open</a>
+            
+            <h2>APKA AKHRI BDAY JO HUM EK SATH CELEBRATE KREGE</h2>
+            <video width="300" controls>
+                <source src="VID-20240617-WA0001.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <footer>
+            <p>This birthday will be your most memorable birthday ever because , you know...</p>
+        </footer>
+    </main>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+</head>
+<body>
+    <header>
+        <h1>Happy Birthday!</h1>
+    </header>
+    <main>
+        <p>Click below !</p>
+        <button id="playAudioBtn">kr touch</button>
+    </main>
+    
+    <audio id="celebration-sound" src="Ishq_Murshid_Drama_Whistle_BGM___Download_Link_⤵️___Ishq_Murshid_Drama_New_Ringtone___Pak_Drama_BGM(128k).m4a"></audio>
+
+    <script>
+        document.getElementById('playAudioBtn').addEventListener('click', function() {
+            document.getElementById('celebration-sound').play();
+        });
+    </script>
+</body>
+</html>
+
+    <div id="preTimer"></div>
+    <div id="timer" class="hidden"></div>
+    <audio id="celebration-sound" src="Ishq_Murshid_Drama_Whistle_BGM___Download_Link_⤵️___Ishq_Murshid_Drama_New_Ringtone___Pak_Drama_BGM(128k).m4a"></audio>
+
+    <script>
+        // Set the unlock time for 5 seconds from page load
+        const unlockDuration = 5 * 1000; // 5 seconds in milliseconds
+        const unlockTime = new Date().getTime() + unlockDuration;
+
+        function updatePreTimer() {
+            const now = new Date().getTime();
+            const timeLeft = unlockTime - now;
+
+            if (timeLeft <= 0) {
+                document.getElementById('preTimer').textContent = "dear .......";
+                document.getElementById('timer').classList.remove('hidden');
+                clearInterval(preTimerInterval);
+                startTimer();
+            } else {
+                const seconds = Math.floor(timeLeft / 1000);
+                document.getElementById('preTimer').textContent = `Time left: ${seconds}s`;
+            }
+        }
+
+        function startTimer() {
+            function updateTimer() {
+                const now = new Date().getTime();
+                const timeLeft = unlockTime - now;
+
+                if (timeLeft <= 0) {
+                    document.getElementById('timer').textContent = "hum hum na rahe tum tum na rahe";
+                    document.getElementById('treasureLink').classList.remove('hidden');
+                    document.getElementById('celebration-sound').play();
+                    // Add confetti or other effects here
+                    clearInterval(timerInterval);
+                } else {
+                    const seconds = Math.floor(timeLeft / 1000);
+                    document.getElementById('timer').textContent = `Time left: ${seconds}s`;
+                }
+            }
+
+            const timerInterval = setInterval(updateTimer, 1000);
+            updateTimer(); // Initialize immediately
+        }
+
+        const preTimerInterval = setInterval(updatePreTimer, 1000);
+        updatePreTimer(); // Initialize immediately
+    </script>
+</body>
+</html>

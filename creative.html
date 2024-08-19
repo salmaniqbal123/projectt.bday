@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Birthday Surprise</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, p {
+            margin: 0;
+            padding: 10px 20px;
+        }
+
+        /* Parallax Section */
+        .parallax {
+            height: 100vh;
+            background: url('your-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .parallax h1 {
+            font-size: 48px;
+            text-shadow: 2px 2px 8px #000;
+            animation: fadeInDown 2s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Interactive Heart Section */
+        .heart-section {
+            background-color: #0f3460;
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .heart {
+            font-size: 120px;
+            color: red;
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Stylish Name */
+        .stylish-name {
+            font-size: 80px;
+            font-weight: bold;
+            color: #fddb3a;
+            text-align: center;
+            text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+            animation: rotate3D 3s infinite linear;
+        }
+
+        @keyframes rotate3D {
+            0% {
+                transform: rotateX(0) rotateY(0);
+            }
+            100% {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+
+        /* Button with Hover Effect */
+        .button {
+            background-color: #e94560;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #903749;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Parallax Section -->
+    <div class="parallax">
+        <h1>lets make this birthday more speacial with a smile. </h1>
+    </div>
+
+    <!-- Heart Section -->
+    <div class="heart-section">
+        <h2>You are my heartbeat</h2>
+        <div class="heart">❤️</div>
+        <p>Your love gives me life. Happy Birthday</p>
+    </div>
+
+    <!-- Stylish Name -->
+    <div class="stylish-name">
+        <h2>Happy Birthday, [rabu]</h2>
+    </div>
+
+    <!-- Button Link -->
+    <div style="text-align:center; padding: 50px 0;">
+        <a href="creative.html" class="button">Unveil Your Surprise</a>
+    </div>
+</body>
+</html>
